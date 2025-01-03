@@ -17,19 +17,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
   document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector(".testimonial-carousel");
-    let scrollAmount = 0;
-  
-    setInterval(() => {
-      if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
-        scrollAmount = 0;
-      } else {
-        scrollAmount += 300; // Adjust scroll amount for each step
-      }
-      carousel.scrollTo({
-        left: scrollAmount,
-        behavior: "smooth"
-      });
-    }, 3000); // Adjust timing (3000ms = 3s)
-  });
-  
+    const track = document.querySelector(".carousel-track");
+    const items = document.querySelectorAll(".menu-item");
+    const itemWidth = items[0].getBoundingClientRect().width;
+
+    let currentIndex = 0;
+
+    // Function to move to the next slide
+    const moveToNextSlide = () => {
+        currentIndex = (currentIndex + 1) % items.length; // Loop back to the first slide
+        track.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
+    };
+
+    // Set up automatic sliding
+    setInterval(moveToNextSlide, 3000); // Change slide every 3 seconds
+});
