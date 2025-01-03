@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="assets/favicon-chai.png">
   <title>Chai-Hut</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header class="header">
     <nav class="navbar">
@@ -17,7 +19,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#menu">Menu</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="#order" class="cta-button">Order Now</a></li>
+      <li><a href="/menu_recommendation/templates/order.html" class="cta-button">Order Now</a></li>
     </ul>
     <div class="hamburger">
         <span></span>
@@ -124,6 +126,130 @@
       </div>
     </div>
   </section>
+
+  <section id="chai-culture" class="chai-culture-section">
+    <div class="culture-container">
+      <div class="culture-text">
+        <h2>Chai Culture</h2>
+        <p>
+          Chai is more than just a beverage; it’s a way of life. Across the globe, chai brings people together—whether it’s a morning ritual, an evening escape, or a shared moment with friends. At Chai-Hut, we honor this tradition with every cup we brew.
+        </p>
+        <p>
+          From the bustling streets of India to cozy corners worldwide, chai represents warmth, comfort, and togetherness. Discover the art of chai, crafted with passion and perfected through generations.
+        </p>
+      </div>
+      <div class="about-video">
+        <video autoplay muted loop playsinline>
+          <source src="assets/chai-brewing.mp4" type="video/mp4">
+        <div class="culture-quote">
+          <blockquote>
+            “A cup of chai is a cup of peace.”
+          </blockquote>
+          <cite>— Indian Proverb</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2 class="section-title">Visit Us</h2>
+        <p class="section-description">
+          We'd love to welcome you to Chai-Hut. Here's how you can find us:
+        </p>
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>123 Chai Street, Flavor Town, FT 45678</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-phone-alt"></i>
+          <p>+1 (555) 123-4567</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <p>contact@chaihut.com</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-clock"></i>
+          <p>Monday - Sunday: 8:00 AM - 10:00 PM</p>
+        </div>
+      </div>
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.5298052471764!2d-122.33734978423464!3d47.60620917918438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490102d9cdbd9b9%3A0xd2a0d301232c8ba2!2sSeattle%2C%20WA!5e0!3m2!1sen!2sus!4v1696352489542!5m2!1sen!2sus"
+          width="100%"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <form action="your-server-endpoint" method="POST" class="contact-form">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Your Email" required />
+        </div>
+        <div class="form-group">
+          <textarea name="message" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Branding and About -->
+      <div class="footer-brand">
+        <h3>Chai-Hut</h3>
+        <p>Your ultimate destination for authentic chai flavors and cozy vibes.</p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#order">Order Online</a></li>
+        </ul>
+      </div>
+  
+      <!-- Social Media -->
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://instagram.com/chaihut" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://facebook.com/chaihut" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/chaihut" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+  
+      <!-- Newsletter Signup -->
+      <div class="footer-newsletter">
+        <h4>Join Our Newsletter</h4>
+        <p>Stay updated with the latest chai flavors and special offers.</p>
+        <form action="#" method="POST">
+          <input type="email" name="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© 2025 Chai-Hut. All Rights Reserved.</p>
+      <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+  </footer>
+  
+  
   
   
 

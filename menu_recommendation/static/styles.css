@@ -1,0 +1,136 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+.order-header {
+    background-color: #f4b400;
+    color: #121212;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.order-header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.order-header .back-button {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #1e1e1e;
+    color: #f4b400;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.order-header .back-button:hover {
+    background-color: #333;
+}
+
+/* Main Section */
+.order-main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Recommendation Section */
+.recommendation-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.recommendation-section h2 {
+    font-size: 1.8rem;
+    color: #f4b400;
+}
+
+.recommendation-section p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #ccc;
+}
+
+/* Order Form Section */
+.order-form-section {
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.order-form-section h2 {
+    font-size: 1.8rem;
+    color: #f4b400;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.order-form-section .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.order-form-section label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+.order-form-section select,
+.order-form-section input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #121212;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.order-form-section select:focus,
+.order-form-section input:focus {
+    outline: none;
+    border-color: #f4b400;
+    box-shadow: 0 0 5px rgba(244, 180, 0, 0.5);
+}
+
+.order-form-section .submit-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #f4b400;
+    color: #1e1e1e;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-form-section .submit-button:hover {
+    background-color: #e69a00;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .order-main {
+        padding: 1rem;
+    }
+
+    .order-header h1 {
+        font-size: 1.5rem;
+    }
+}

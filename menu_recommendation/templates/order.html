@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now - Chai-Hut</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="bg-yellow-500 text-gray-900 py-4 text-center">
+        <h1 class="text-2xl font-bold">Order Your Favorite Chai and Snacks</h1>
+        <a href="/" class="text-sm underline hover:text-yellow-700">Back to Home</a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto mt-8 p-4">
+        <!-- Menu Grid -->
+        <section id="menu-grid" class="mb-8">
+            <h2 class="text-xl font-semibold text-yellow-400 mb-4 text-center">Our Menu</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Menu Item Template -->
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/masala-chai.jpg" alt="Masala Chai" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Masala Chai</h3>
+                    <p class="text-sm text-gray-300">Aromatic and spiced to perfection.</p>
+                    <span class="block mt-2 text-sm text-gray-400">$3.50</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full"     data-item-id="1" 
+                    onclick="addToOrder(this)">Add to Order</button>
+                </div>
+                <!-- Repeat Menu Items -->
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/samosa-chai.jpg" alt="Chai with Samosa" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Chai with Samosa</h3>
+                    <p class="text-sm text-gray-300">The perfect duo for every chai lover.</p>
+                    <span class="block mt-2 text-sm text-gray-400">$5.00</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full">Add to Order</button>
+                </div>
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/iced-chai-latte.jpg" alt="Iced Chai Latte" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Iced Chai Latte</h3>
+                    <p class="text-sm text-gray-300">Refreshing for your afternoon!</p>
+                    <span class="block mt-2 text-sm text-gray-400">$4.50</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full">Add to Order</button>
+                </div>
+
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/chaimuffin.jpg" alt="Chai Muffin" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Chai Muffin</h3>
+                    <p class="text-sm text-gray-300">Soft and infused with chai spices.</p>
+                    <span class="block mt-2 text-sm text-gray-400">$3.00</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full">Add to Order</button>
+                </div>
+
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/pinkchai.jpg" alt="New Item" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Kashmiri Pink Chai</h3>
+                    <p class="text-sm text-gray-300">Creamy chai with a delicate rose-pink hue, infused with saffron and nuts.</p>
+                    <span class="block mt-2 text-sm text-gray-400">$5.00</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full">Add to Order</button>
+                </div>
+
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/tumeric-tea.jpg" alt="New Item" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Tumeric Golden Latte</h3>
+                    <p class="text-sm text-gray-300">A healthy blend of turmeric, milk, and subtle spices.</p>
+                    <span class="block mt-2 text-sm text-gray-400">$3.50</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full">Add to Order</button>
+                </div>
+                
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/ginger-tea.jpg" alt="New Item" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Adrak (Ginger) Chai</h3>
+                    <p class="text-sm text-gray-300">Robust black tea infused with fresh ginger for a zesty kick.</p>
+                    <span class="block mt-2 text-sm text-gray-400">$3.50</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full">Add to Order</button>
+                </div>
+
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/mint-chai.jpg" alt="New Item" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Mint Masala Chai</h3>
+                    <p class="text-sm text-gray-300">Traditional chai with a twist of refreshing mint.</p>
+                    <span class="block mt-2 text-sm text-gray-400">$4.50</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full">Add to Order</button>
+                </div>
+
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/tandoori-chai.jpg" alt="New Item" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Tandoori Chai</h3>
+                    <p class="text-sm text-gray-300">Smoked chai served in traditional clay cups for a unique flavor.</p>
+                    <span class="block mt-2 text-sm text-gray-400">$2.50</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full">Add to Order</button>
+                </div>
+
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/chaifrappe.jpg" alt="New Item" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Chai Frappe</h3>
+                    <p class="text-sm text-gray-300">A frothy, cold blend of chai and coffee for fusion lovers.</p>
+                    <span class="block mt-2 text-sm text-gray-400">$3.50</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full">Add to Order</button>
+                </div>
+            </div>
+                <h2 class="text-xl font-semibold text-yellow-400 mb-4 text-center">SNACKS</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/samosa.jpg" alt="Samosa Platter" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Samosa Platter</h3>
+                    <p class="text-sm text-gray-300">Crispy fried samosas with a variety of fillings: potato, peas, and spiced lentils.</p>
+                    <span class="block mt-2 text-sm text-gray-400">$4.50</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full">Add to Order</button>
+                </div>
+                
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/pannerpakora.jpg" alt="Paneer Pakoras" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Paneer Pakoras</h3>
+                    <p class="text-sm text-gray-300">Golden-brown cottage cheese fritters served with mint chutney.</p>
+                    <span class="block mt-2 text-sm text-gray-400">$5.00</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full">Add to Order</button>
+                </div>
+                
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/chaatchaat.jpg" alt="Chai-Hut Chaat" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Chai-Hut Chaat</h3>
+                    <p class="text-sm text-gray-300">Tangy and spicy street-style chaat with crispy puris and yogurt.</p>
+                    <span class="block mt-2 text-sm text-gray-400">$3.00</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full">Add to Order</button>
+                </div>
+                
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/masalafries.jpg" alt="Masala Fries" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Masala Fries</h3>
+                    <p class="text-sm text-gray-300">French fries tossed with a secret chai masala blend.</p>
+                    <span class="block mt-2 text-sm text-gray-400">$2.50</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full">Add to Order</button>
+                </div>
+                
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/chilicheesetoast.jpg" alt="Chili Cheese Toast" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Chili Cheese Toast</h3>
+                    <p class="text-sm text-gray-300">Toasted bread topped with melted cheese and green chilies.</p>
+                    <span class="block mt-2 text-sm text-gray-400">$3.00</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full">Add to Order</button>
+                </div>
+                
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/kathirolls.jpg" alt="Mini Kathi Rolls" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Mini Kathi Rolls</h3>
+                    <p class="text-sm text-gray-300">Bite-sized wraps filled with spiced vegetables or chicken.</p>
+                    <span class="block mt-2 text-sm text-gray-400">$6.00</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full">Add to Order</button>
+                </div>
+            </div>
+
+            <h2 class="text-xl font-semibold text-yellow-400 mb-4 text-center">Desserts</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/gulabjamunparfait.jpg" alt="Gulab Jamun Parfait" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Gulab Jamun Parfait</h3>
+                    <p class="text-sm text-gray-300">A modern take on the classic gulab jamun served with cream and nuts.</p>
+                    <span class="block mt-2 text-sm text-gray-400">$4.50</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full">Add to Order</button>
+                </div>
+                
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/chaimuffin.jpg" alt="Chai Muffins" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Chai Muffins</h3>
+                    <p class="text-sm text-gray-300">Soft muffins infused with chai spices and a drizzle of glaze.</p>
+                    <span class="block mt-2 text-sm text-gray-400">$3.50</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full">Add to Order</button>
+                </div>
+                
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/kulfipops.jpg" alt="Kulfi Pops" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Kulfi Pops</h3>
+                    <p class="text-sm text-gray-300">Traditional Indian ice cream in mango, pistachio, or rose flavors.</p>
+                    <span class="block mt-2 text-sm text-gray-400">$4.00</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full">Add to Order</button>
+                </div>
+                
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/cardamomcookie.jpg" alt="Cardamom Cookies" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Cardamom Cookies</h3>
+                    <p class="text-sm text-gray-300">Crunchy cookies with a hint of cardamom, perfect for dipping in chai.</p>
+                    <span class="block mt-2 text-sm text-gray-400">$2.50</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full">Add to Order</button>
+                </div>
+                
+                <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                    <img src="../../assets/chaicheesecake.jpg" alt="Chai-Spiced Cheesecake" class="w-full h-40 object-cover rounded-md mb-3">
+                    <h3 class="text-lg font-semibold text-yellow-400">Chai-Spiced Cheesecake</h3>
+                    <p class="text-sm text-gray-300">A rich, creamy dessert infused with chai flavors.</p>
+                    <span class="block mt-2 text-sm text-gray-400">$5.50</span>
+                    <button class="mt-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md w-full">Add to Order</button>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-center py-4 mt-8">
+        <p class="text-sm text-gray-400">&copy; 2025 Chai-Hut. All Rights Reserved.</p>
+    </footer>
+
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
