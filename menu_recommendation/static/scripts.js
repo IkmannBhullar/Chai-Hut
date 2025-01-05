@@ -15,32 +15,24 @@ let order = [];
 
 // Function to handle "Add to Order" button click
 function addToOrder(button) {
-    const itemId = button.getAttribute("data-item-id");
-
-    // Disable button and provide feedback
+    // Disable the button temporarily
     button.disabled = true;
-    button.textContent = "Adding...";
 
-    // Send data to the backend
-    fetch("/add-to-order", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ item_id: itemId })
-    })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data); // Debug: Log server response
-            button.textContent = "Added!";
-            setTimeout(() => {
-                button.textContent = "Add to Order";
-                button.disabled = false;
-            }, 1500);
-        })
-        .catch(error => {
-            console.error("Error:", error);
-            button.textContent = "Try Again";
-            button.disabled = false;
-        });
+    // Get item details
+    const itemId = button.getAttribute("data-item-id");
+    const itemName = button.parentElement.querySelector("h3").innerText;
+    const itemPrice = button.parentElement.querySelector(".menu-price").innerText;
+
+    // Add the item to the order
+    order.push({ id: itemId, name: itemName, price: itemPrice });
+
+    // Provide visual feedback
+    button.textContent = "Added!";
+    setTimeout(() => {
+        button.textContent = "Add to Order";
+        button.disabled = false; // Re-enable button
+    }, 1500);
+
+    // Debug: Log the current order
+    console.log("Order Updated:", order);
 }
