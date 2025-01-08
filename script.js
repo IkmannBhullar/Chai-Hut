@@ -32,3 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Set up automatic sliding
     setInterval(moveToNextSlide, 3000); // Change slide every 3 seconds
 });
+
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.toggle('open');
+}
+
+const overlay = document.querySelector('.overlay');
+overlay.classList.toggle('show');
